@@ -32,7 +32,7 @@ auto infinity on
 studies respec
 eternity
 
-notify "Completing EC1 x5"
+notify "Completing EC1 x2"
 studies nowait purchase ec1_template
 unlock ec 1
 start ec 1
@@ -295,7 +295,7 @@ eternity
 
 notify "Grinding to 5k TT"
 studies respec
-auto infinity 1.00e251
+auto infinity 1e251 x highest
 auto infinity on
 eternity
 auto infinity off
@@ -364,6 +364,20 @@ if ec4 completions < 5 {
 	studies nowait purchase ec4_template
 	unlock ec 4
 	start ec 4
+	wait pending completions >= 5
+	eternity
+}
+
+if ec1 completions < 5 {
+	notify "Finishing EC1"
+	auto eternity off
+	auto infinity on
+	studies respec
+	eternity
+	auto infinity off
+	studies nowait purchase ec1_template
+	unlock ec 1
+	start ec 1
 	wait pending completions >= 5
 	eternity
 }
@@ -437,9 +451,10 @@ auto eternity off
 eternity
 studies nowait load name 226
 pause 10s
+
+eternity
 black hole on
-pause 10s
 
-notify "a little break to think"
-black hole off
-
+//echo "Pause 60 sec and restart Reality"
+//pause 60s
+//reality nowait
