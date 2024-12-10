@@ -374,10 +374,10 @@ if ec1 completions < 5 {
 	auto infinity on
 	studies respec
 	eternity
-	auto infinity off
 	studies nowait purchase ec1_template
 	unlock ec 1
 	start ec 1
+//	auto infinity off
 	wait pending completions >= 5
 	eternity
 }
