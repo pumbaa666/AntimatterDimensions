@@ -1,5 +1,5 @@
-// To use with Glyphs levels higher than 40
-// Best glphs for farming rares Glyphs are Replication
+// To use with Glyphs levels higher than 300
+
 
 notify "Faster. Harder ! SCOOTER !!!"
 notify "Bootstart, grinding to 160 TT"
@@ -33,18 +33,18 @@ auto infinity on
 studies respec
 eternity
 
-notify "Completing EC1 x2"
+notify "Completing EC1 x5"
 studies nowait purchase ec1_template
 unlock ec 1
 start ec 1
-wait pending completions >= 2
+wait pending completions >= 5
 eternity
 
 notify "Completing EC2 x5"
 studies nowait purchase ec2_template
 unlock ec 2
 start ec 2
-wait pending completions >= 4
+wait pending completions >= 5
 eternity
 
 notify "Completing EC3 x5"
@@ -141,7 +141,7 @@ if ep < 1e62 {
 	wait ep > 1e62
 }
 
-notify "Completing EC8 x4"
+notify "Completing EC8 x5"
 auto eternity off
 auto infinity off
 studies respec
@@ -149,7 +149,7 @@ eternity
 studies nowait purchase ec8_template
 unlock ec 8
 start ec 8
-wait pending completions >= 4
+wait pending completions >= 5
 eternity
 
 
@@ -171,16 +171,18 @@ if ec9 completions < 5 {
 	eternity
 }
 
-notify "Finishing EC8"
-auto infinity on
-auto infinity 1e201 x highest
-studies respec
-eternity
-studies nowait purchase ec8_template
-unlock ec 8
-start ec 8
-wait pending completions >= 5
-eternity
+if ec8 completions < 5 {
+	notify "Finishing EC8"
+	auto infinity on
+	auto infinity 1e201 x highest
+	studies respec
+	eternity
+	studies nowait purchase ec8_template
+	unlock ec 8
+	start ec 8
+	wait pending completions >= 5
+	eternity
+}
 
 notify "Grinding to 1e130 EP to buy Eternity Upgrade"
 studies respec
@@ -189,7 +191,7 @@ eternity
 studies nowait load name 226
 
 // TODO e18, e15, e12, e9
-auto eternity 1.00e12 x highest
+auto eternity 1.00e15 x highest
 auto eternity on
 auto infinity off
 until ep > 1e130 {
@@ -198,7 +200,7 @@ until ep > 1e130 {
 	studies nowait load name 226
 }
 
-notify "Completing EC10 x1"
+notify "Completing EC10 x5"
 auto eternity off
 auto infinity on
 studies respec
@@ -207,7 +209,7 @@ studies nowait purchase ec10_small_template
 unlock ec 10
 auto infinity off
 start ec 10
-wait pending completions >= 1
+wait pending completions >= 5
 auto infinity on
 eternity
 auto infinity off
@@ -247,7 +249,7 @@ auto infinity on
 eternity
 auto infinity off
 //studies nowait load name 226
-auto eternity 1.00e76 x highest
+auto eternity 1.00e125 x highest
 until ep > 1e600 {
 	notify "Reloading tree 226 until 1e600 EP"
 	studies nowait load name 226
@@ -282,7 +284,7 @@ if ec7 completions < 5 {
 	eternity
 }
 
-notify "Completing EC11 x5 (test. anciennement x2)"
+notify "Completing EC11 x5"
 auto eternity off
 auto infinity on
 studies respec
@@ -291,7 +293,7 @@ studies nowait purchase ec11_template
 unlock ec 11
 auto infinity off
 start ec 11
-wait pending completions >= 1
+wait pending completions >= 5
 eternity
 
 notify "Grinding to 5k TT"
@@ -301,7 +303,7 @@ auto infinity 1e251 x highest
 auto infinity on
 eternity
 auto infinity off
-auto eternity 1e76 x highest
+auto eternity 1e124 x highest
 auto eternity on
 until tt > 10000 {
 	notify "Reloading tree 226 until 10k TT"
@@ -309,11 +311,11 @@ until tt > 10000 {
 	pause 1s
 }
 
-//auto infinity on
-//studies respec
-//eternity
-//studies nowait load name 226
-//auto infinity off
+auto infinity on
+studies respec
+eternity
+studies nowait load name 226
+auto infinity off
 
 notify "Starting to thing with Dilation !"
 auto eternity 1e150 x highest
@@ -401,48 +403,34 @@ until total TT > 1e12 {
 	pause 3s
 }
 
-auto eternity 1e600 x highest
-until ep > 1e8500 {
-	notify "Restarting Dilation to apply Tachyon bonus"
-	auto infinity on
-	studies respec
-	eternity
-	auto infinity off
-	studies nowait load name Dila
-	start dilation
-	pause 10s
-  
-	notify "Farming EP with tree 226"
-	auto infinity on
-	studies respec
-	eternity
-	auto infinity off
-	studies nowait load name 226
-	pause 10s
-	
-	auto eternity 1e400 x highest
-}
+//auto infinity off
+//auto eternity off
+//notify "GO A LA MAIN!"
+
+
 
 //notify "Waiting for Black Hole"
 //wait black hole bh1
 //notify "BLACK HOLE"
 //black hole off
 auto eternity off
-until tp > 1e50 {
+until total tt > 1e18000 {
   notify "Farming Tachyon Particles for 10 sec"
   studies respec
   eternity
   studies nowait load name Dila
   start dilation
   black hole on
-  pause 10s
+  pause 20s
 
   notify "Farming Glyphs for 10 sec"
   //black hole off
   studies respec
   eternity
+  auto eternity on
+  auto eternity 1e2000 x highest
   studies nowait load name 226
-  pause 60s
+  pause 40s
 
   eternity
   //black hole on
