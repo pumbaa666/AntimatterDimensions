@@ -143,12 +143,13 @@ if ep < 1e62 {
 
 notify "Completing EC8 x4"
 auto eternity off
-auto infinity off
+auto infinity on
 studies respec
 eternity
 studies nowait purchase ec8_template
 unlock ec 8
 start ec 8
+auto infinity off
 wait pending completions >= 4
 eternity
 
