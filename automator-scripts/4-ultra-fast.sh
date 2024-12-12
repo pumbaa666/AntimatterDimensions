@@ -415,7 +415,7 @@ until total TT > 1e12 {
 //black hole off
 auto eternity off
 until total tt > 1e18000 {
-  notify "Farming Tachyon Particles for 10 sec"
+  notify "Farming Tachyon Particles for 20 sec"
   studies respec
   eternity
   studies nowait load name Dila
@@ -423,7 +423,7 @@ until total tt > 1e18000 {
   black hole on
   pause 20s
 
-  notify "Farming Glyphs for 10 sec"
+  notify "Farming Glyphs for 40 sec"
   //black hole off
   studies respec
   eternity
