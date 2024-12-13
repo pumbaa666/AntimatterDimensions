@@ -2,7 +2,7 @@
 
 
 notify "Faster. Harder ! SCOOTER !!!"
-notify "Bootstart, grinding to 160 TT"
+//notify "Bootstart, grinding to 160 TT"
 auto eternity 1.00e3 x highest
 auto eternity on
 auto infinity 1.00e75 x highest
@@ -33,21 +33,21 @@ auto infinity on
 studies respec
 eternity
 
-notify "Completing EC1 x5"
+//notify "Completing EC1 x5"
 studies nowait purchase ec1_template
 unlock ec 1
 start ec 1
 wait pending completions >= 5
 eternity
 
-notify "Completing EC2 x5"
+//notify "Completing EC2 x5"
 studies nowait purchase ec2_template
 unlock ec 2
 start ec 2
 wait pending completions >= 5
 eternity
 
-notify "Completing EC3 x5"
+//notify "Completing EC3 x5"
 studies nowait purchase ec3_template
 unlock ec 3
 start ec 3
@@ -58,7 +58,7 @@ eternity
 notify "Eternity Challenge 4 to 6"
 auto eternity off
 
-notify "Completing EC4 x3 (8 Infinities max /!\)"
+//notify "Completing EC4 x3 (8 Infinities max /!\)"
 //auto infinity 5.1 sec
 auto infinity on
 //eternity
@@ -73,7 +73,7 @@ wait pending completions >= 3
 eternity
 auto infinity 1.00e75 x highest
 
-notify "Completing EC5 x5"
+//notify "Completing EC5 x5"
 auto infinity 1.00e44 x highest
 auto infinity on
 eternity
@@ -85,8 +85,8 @@ start ec 5
 wait pending completions >= 5
 eternity
 
-notify "Grinding to 350 TT"
-notify "/!\ buy TS181 ASAP /!\"
+notify "Grinding to 350 TT /!\ buy TS181 ASAP /!\ "
+
 studies respec
 auto infinity 1.00e77 x highest
 auto infinity on
@@ -94,12 +94,12 @@ auto eternity 1e3 x highest
 auto eternity on
 eternity
 until total TT > 350 {
-	notify "Reloading Dual until 350 total TT (for TS181)"
+	//notify "Reloading Dual until 350 total TT (for TS181)"
 	studies nowait load name Dual
 	pause 1s
 }
 
-notify "No more Infinity crunches since we bought TS181"
+//notify "No more Infinity crunches since we bought TS181"
 auto infinity off
 
 notify "Completing EC 6 to 7"
@@ -201,7 +201,7 @@ until ep > 1e130 {
 	studies nowait load name 226
 }
 
-notify "Completing EC10 x5"
+//notify "Completing EC10 x5"
 auto eternity off
 auto infinity on
 studies respec
@@ -215,7 +215,7 @@ auto infinity on
 eternity
 auto infinity off
 
-notify "Grinding to 1e200 EP"
+//notify "Grinding to 1e200 EP"
 studies respec
 auto infinity on
 eternity
@@ -252,7 +252,7 @@ auto infinity off
 //studies nowait load name 226
 auto eternity 1.00e125 x highest
 until ep > 1e600 {
-	notify "Reloading tree 226 until 1e600 EP"
+	//notify "Reloading tree 226 until 1e600 EP"
 	studies nowait load name 226
 	pause 1s
 }
@@ -307,7 +307,7 @@ auto infinity off
 auto eternity 1e124 x highest
 auto eternity on
 until tt > 10000 {
-	notify "Reloading tree 226 until 10k TT"
+	//notify "Reloading tree 226 until 10k TT"
 	studies nowait load name 226
 	pause 1s
 }
@@ -318,7 +318,7 @@ eternity
 studies nowait load name 226
 auto infinity off
 
-notify "Starting to thing with Dilation !"
+//notify "Starting to thing with Dilation !"
 auto eternity 1e150 x highest
 auto eternity on
 auto infinity on
@@ -330,6 +330,7 @@ unlock dilation
 start dilation
 wait ip > 1.8e308
 
+notify "Finishing all Eternity Challenges"
 if ec11 completions < 5 {
 	notify "Finishing EC11 after first Dilation"
 	auto eternity off
@@ -387,7 +388,7 @@ if ec1 completions < 5 {
 	eternity
 }
 
-auto eternity 1e500 x highest
+auto eternity 1e1500 x highest
 auto infinity on
 studies respec
 eternity
@@ -408,31 +409,23 @@ until total TT > 1e12 {
 //auto eternity off
 //notify "GO A LA MAIN!"
 
-
-
-//notify "Waiting for Black Hole"
-//wait black hole bh1
-//notify "BLACK HOLE"
-//black hole off
 auto eternity off
 until total tt > 1e18000 {
-  notify "Farming Tachyon Particles for 20 sec"
+  notify "Farming Tachyon Particles for 5 sec"
   studies respec
   eternity
   studies nowait load name Dila
   start dilation
   black hole on
-  pause 20s
+  pause 5s
 
-  notify "Farming Glyphs for 40 sec"
-  //black hole off
+  notify "Farming Glyphs for 20 sec"
   studies respec
   eternity
   auto eternity on
-  auto eternity 1e2000 x highest
+  auto eternity 1e1000 x highest
   studies nowait load name 226
-  pause 40s
+  pause 20s
 
   eternity
-  //black hole on
 }
