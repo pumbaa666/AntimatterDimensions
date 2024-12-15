@@ -410,7 +410,7 @@ until total TT > 1e12 {
 //notify "GO A LA MAIN!"
 
 auto eternity off
-until total tt > 1e18000 {
+until ep > 1e18000 {
   notify "Farming Tachyon Particles for 5 sec"
   studies respec
   eternity
