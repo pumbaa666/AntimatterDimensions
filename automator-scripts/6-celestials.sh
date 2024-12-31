@@ -226,6 +226,30 @@ start ec 11
 wait pending completions >= 5
 eternity
 
+if ec9 completions < 5 {
+	notify "Finishing EC9"
+	auto infinity on
+	studies respec
+	eternity
+	studies purchase ec9_template
+	unlock ec 9
+	start ec 9
+	wait pending completions >= 5
+	eternity
+}
+
+if ec4 completions < 5 {
+	notify "Finishing EC9"
+	auto infinity on
+	studies respec
+	eternity
+	studies purchase ec9_template
+	unlock ec 4
+	start ec 4
+	wait pending completions >= 5
+	eternity
+}
+
 notify "Grinding to 5k TT"
 studies respec
 auto infinity on
